@@ -28,6 +28,7 @@ public class Fridge {
     public void deleteModelInfo(){
         this.model = null;
     }
+    
     public static Fridge getInstance(){
         if (instance == null){
             instance = new Fridge();
