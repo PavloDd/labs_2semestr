@@ -1,12 +1,12 @@
 package ua.lviv.iot.algo.part1.lab1;
 
 import lombok.*;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
 @AllArgsConstructor
+
 public class Fridge {
     private String brand;
     private String model;
@@ -14,14 +14,17 @@ public class Fridge {
     private boolean isDefrosing;
     private char energyEfficiencyClass;
     private static Fridge instance;
+
     public void turnOnDefrosing(){
         this.isDefrosing = true;
         System.out.println(getModel()+" is defrosing");
     }
+
     public void turnOffDefrosing(){
         this.isDefrosing = false;
         System.out.println(getModel()+" isn`t defrosing");
     }
+
     public void deleteModelInfo(){
         this.model = null;
     }
@@ -31,10 +34,8 @@ public class Fridge {
         }
         return instance;
     }
-    public static void main(String[] args) {
-        Fridge fridge = new Fridge("Bosch","in132","20 l",true,'B');
-        fridge.turnOffDefrosing();
 
+    public static void main(String[] args) {
         Fridge fridges[] = new Fridge[4];
         fridges[0] = new Fridge("Bosch","in132","20 l",true,'B');
         fridges[1] = new Fridge();
