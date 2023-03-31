@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
+@ToStr
 
 public class FridgeCamera extends Fridge{
     private int numberOfEntrances = 1;
