@@ -1,12 +1,10 @@
 package ua.lviv.iot.algo.part1.lab2;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
 
 
@@ -32,7 +30,7 @@ public class WineFridge extends Fridge{
     public String toString() {
         return "WineFridge{" +
                 "capacityInNumberOfBottles=" + capacityInNumberOfBottles +
-                ", maxVolumeOfBottleInLitters=" + maxVolumeOfBottleInLitters +
+                "maxVolumeOfBottleInLitters=" + maxVolumeOfBottleInLitters +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", capacity='" + capacity + '\'' +

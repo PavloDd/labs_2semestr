@@ -1,14 +1,12 @@
 package ua.lviv.iot.algo.part1.lab2;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 
 public abstract class Fridge {
     protected String brand;
@@ -32,8 +30,4 @@ public abstract class Fridge {
     public void deleteModelInfo(){
         this.model = null;
     };
-
-    public String toString() {
-        return "Fridge(brand=" + this.getBrand() + ", model=" + this.getModel() + ", capacity=" + this.getCapacity() + ", isDefrosing=" + this.isDefrosing() + ", energyEfficiencyClass=" + this.getEnergyEfficiencyClass() + ")";
-    }
 }

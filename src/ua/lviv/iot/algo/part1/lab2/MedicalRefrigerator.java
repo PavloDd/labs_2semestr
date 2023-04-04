@@ -4,7 +4,9 @@ import lombok.*;
 
 @Setter
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
+
 
 public class MedicalRefrigerator extends Fridge {
     private int capacityInTestTubes;
@@ -26,7 +28,7 @@ public class MedicalRefrigerator extends Fridge {
     public String toString() {
         return "MedicalRefrigerator{" +
                 "capacityInTestTubes=" + capacityInTestTubes +
-                ", capacityOfTestTubeInMl=" + capacityOfTestTubeInMl +
+                "capacityOfTestTubeInMl=" + capacityOfTestTubeInMl +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", capacity='" + capacity + '\'' +

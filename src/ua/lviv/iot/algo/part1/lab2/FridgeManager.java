@@ -9,7 +9,6 @@ public class FridgeManager {
 
     public void addFridge (Fridge fridge){
         this.fridges.add(fridge);
-
     }
 
     public void addAllFridges (List <Fridge> fridges){
@@ -28,7 +27,7 @@ public class FridgeManager {
                 collect(Collectors.toList());
     }
 
-    public static void main(String ... Args){
+    public static void main(String ... args){
         List <Fridge> fridges = new LinkedList<>();
         fridges.add(new WineFridge("Bosch","AA12","22l",false,'B',10, 2));
         fridges.add(new WineFridge("Bosch","AA25","10l",false,'A',4, 2));

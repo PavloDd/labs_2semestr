@@ -1,14 +1,12 @@
 package ua.lviv.iot.algo.part1.lab2;
 
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
-@ToStr
 
 public class FridgeCamera extends Fridge{
     private int numberOfEntrances = 1;

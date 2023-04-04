@@ -4,8 +4,8 @@ import lombok.*;
 
 @Setter
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
-
 
 public class ShowcaseRefrigerator extends Fridge {
     private int exposureAreaInSquareMeters;
@@ -31,8 +31,8 @@ public class ShowcaseRefrigerator extends Fridge {
     public String toString() {
         return "ShowcaseRefrigerator{" +
                 "exposureAreaInSquareMeters=" + exposureAreaInSquareMeters +
-                ", weightWhichFitsUnderBarInKg=" + weightWhichFitsUnderBarInKg +
-                ", weightWhichFitsOnBarInKg=" + weightWhichFitsOnBarInKg +
+                "weightWhichFitsUnderBarInKg=" + weightWhichFitsUnderBarInKg +
+                "weightWhichFitsOnBarInKg=" + weightWhichFitsOnBarInKg +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", capacity='" + capacity + '\'' +
