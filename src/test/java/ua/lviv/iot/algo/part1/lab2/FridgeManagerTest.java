@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FridgeManagerTest {
 
     @Test
-    void testAddFridge() {
+    public void testAddFridge() {
         FridgeManager fridgeManager = new FridgeManager();
         WineFridge fridge = new WineFridge("Bosch","AA12","22l",false,'B',10, 2);
         fridgeManager.addFridge(fridge);
@@ -18,7 +18,7 @@ class FridgeManagerTest {
     }
 
     @Test
-    void testAddAllFridges() {
+    public void testAddAllFridges() {
         FridgeManager fridgeManager = new FridgeManager();
         WineFridge fridge0 = new WineFridge("Bosch","AA12","22l",false,'A',10, 3);
         WineFridge fridge1 = new WineFridge("Bosch","BB12","23l",false,'B',11, 2);
@@ -31,7 +31,7 @@ class FridgeManagerTest {
     }
 
     @Test
-    void testFindFridgeByBrand() {
+    public void testFindFridgeByBrand() {
         FridgeManager fridgeManager = new FridgeManager();
         WineFridge fridge0 = new WineFridge("Bosch","AA12","22l",false,'A',10, 3);
         WineFridge fridge1 = new WineFridge("Samsung","BB12","23l",false,'B',11, 2);
@@ -45,7 +45,7 @@ class FridgeManagerTest {
     }
 
     @Test
-    void testFindFridgeByEnergyEfficiencyClass() {
+    public void testFindFridgeByEnergyEfficiencyClass() {
         FridgeManager fridgeManager = new FridgeManager();
         WineFridge fridge0 = new WineFridge("Bosch","AA12","22l",false,'A',10, 3);
         WineFridge fridge1 = new WineFridge("Samsung","BB12","23l",false,'B',11, 2);

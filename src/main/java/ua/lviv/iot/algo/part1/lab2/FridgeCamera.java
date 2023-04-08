@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 
 
-public class FridgeCamera extends Fridge{
+public class FridgeCamera extends Fridge {
     private int numberOfEntrances = 1;
     private String typeOfTapeDrive;
     private int maxTapeSpeedInMetersPerSec;
@@ -31,18 +31,28 @@ public class FridgeCamera extends Fridge{
 
     @Override
     public String toString() {
-        return "FridgeCamera{" +
-                "numberOfEntrances=" + numberOfEntrances +
-                ", typeOfTapeDrive='" + typeOfTapeDrive + '\'' +
-                ", maxTapeSpeedInMetersPerSec=" + maxTapeSpeedInMetersPerSec +
-                ", maxWeightTapeCanWithstand=" + maxWeightTapeCanWithstand +
-                ", brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", capacity='" + capacity + '\'' +
-                ", isDefrosing=" + isDefrosing +
-                ", energyEfficiencyClass=" + energyEfficiencyClass +
-                '}';
+        return "FridgeCamera{"
+                + "numberOfEntrances="
+                + numberOfEntrances
+                + ", typeOfTapeDrive='"
+                + typeOfTapeDrive
+                + '\''
+                + ", maxTapeSpeedInMetersPerSec="
+                + maxTapeSpeedInMetersPerSec
+                + ", maxWeightTapeCanWithstand="
+                + maxWeightTapeCanWithstand
+                + ", brand='" + brand
+                + '\''
+                + ", model='" + model
+                + '\''
+                + ", capacity='"
+                + capacity
+                + '\''
+                + ", isDefrosing="
+                + isDefrosing
+                + ", energyEfficiencyClass="
+                + energyEfficiencyClass
+                + '}';
     }
-
 
 }

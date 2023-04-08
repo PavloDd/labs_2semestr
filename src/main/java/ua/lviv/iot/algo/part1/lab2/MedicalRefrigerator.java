@@ -25,15 +25,25 @@ public class MedicalRefrigerator extends Fridge {
     }
 
     @Override
-    public String toString() {
-        return "MedicalRefrigerator{" +
-                "capacityInTestTubes=" + capacityInTestTubes +
-                ", capacityOfTestTubeInMl=" + capacityOfTestTubeInMl +
-                ", brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", capacity='" + capacity + '\'' +
-                ", isDefrosing=" + isDefrosing +
-                ", energyEfficiencyClass=" + energyEfficiencyClass +
-                '}';
+    public String toString () {
+        return "MedicalRefrigerator{"
+                + "capacityInTestTubes="
+                + capacityInTestTubes
+                + ", capacityOfTestTubeInMl="
+                + capacityOfTestTubeInMl
+                + ", brand='"
+                + brand
+                + '\''
+                + ", model='"
+                + model
+                + '\''
+                + ", capacity='"
+                + capacity
+                + '\''
+                + ", isDefrosing="
+                + isDefrosing
+                + ", energyEfficiencyClass="
+                + energyEfficiencyClass
+                + '}';
     }
 }

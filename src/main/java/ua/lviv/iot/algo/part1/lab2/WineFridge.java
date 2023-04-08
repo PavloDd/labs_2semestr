@@ -1,6 +1,7 @@
 package ua.lviv.iot.algo.part1.lab2;
 
-import lombok.*;
+import lombok.Setter;
+import lombok.Getter;
 
 @Setter
 @Getter
@@ -9,13 +10,13 @@ import lombok.*;
 
 
 
-public class WineFridge extends Fridge{
+public class WineFridge extends Fridge {
 
     private int capacityInNumberOfBottles;
     private int maxVolumeOfBottleInLitters;
 
     @Override
-    public int getMaxUsableCapacity() {
+    public int getMaxUsableCapacity () {
         int capacity = this.capacityInNumberOfBottles * this.maxVolumeOfBottleInLitters;
         return capacity;
     }
@@ -27,15 +28,25 @@ public class WineFridge extends Fridge{
     }
 
     @Override
-    public String toString() {
-        return "WineFridge{" +
-                "capacityInNumberOfBottles=" + capacityInNumberOfBottles +
-                ", maxVolumeOfBottleInLitters=" + maxVolumeOfBottleInLitters +
-                ", brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", capacity='" + capacity + '\'' +
-                ", isDefrosing=" + isDefrosing +
-                ", energyEfficiencyClass=" + energyEfficiencyClass +
-                '}';
+    public String toString () {
+        return "WineFridge{"
+                + "capacityInNumberOfBottles="
+                + capacityInNumberOfBottles
+                + ", maxVolumeOfBottleInLitters="
+                + maxVolumeOfBottleInLitters
+                + ", brand='"
+                + brand
+                + '\''
+                + ", model='"
+                + model
+                + '\''
+                + ", capacity='"
+                + capacity
+                + '\''
+                + ", isDefrosing="
+                + isDefrosing
+                + ", energyEfficiencyClass="
+                + energyEfficiencyClass
+                + '}';
     }
 }

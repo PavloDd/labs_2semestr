@@ -6,7 +6,6 @@ import lombok.Setter;
 @Setter
 @Getter
 
-
 public class ShowcaseRefrigerator extends Fridge {
     private int exposureAreaInSquareMeters;
     private int weightWhichFitsUnderBarInKg;
@@ -14,7 +13,7 @@ public class ShowcaseRefrigerator extends Fridge {
     private static int VOLUME_PER_KILOGRAM = 3;
 
     @Override
-    public int getMaxUsableCapacity() {
+    public int getMaxUsableCapacity () {
         int capacity = (this.weightWhichFitsOnBarInKg + this.weightWhichFitsUnderBarInKg) * VOLUME_PER_KILOGRAM;
         return capacity;
 
@@ -28,16 +27,27 @@ public class ShowcaseRefrigerator extends Fridge {
     }
 
     @Override
-    public String toString() {
-        return "ShowcaseRefrigerator{" +
-                "exposureAreaInSquareMeters=" + exposureAreaInSquareMeters +
-                ", weightWhichFitsUnderBarInKg=" + weightWhichFitsUnderBarInKg +
-                ", weightWhichFitsOnBarInKg=" + weightWhichFitsOnBarInKg +
-                ", brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", capacity='" + capacity + '\'' +
-                ", isDefrosing=" + isDefrosing +
-                ", energyEfficiencyClass=" + energyEfficiencyClass +
-                '}';
+    public String toString () {
+        return "ShowcaseRefrigerator{"
+                + "exposureAreaInSquareMeters="
+                + exposureAreaInSquareMeters
+                + ", weightWhichFitsUnderBarInKg="
+                + weightWhichFitsUnderBarInKg
+                + ", weightWhichFitsOnBarInKg="
+                + weightWhichFitsOnBarInKg
+                + ", brand='"
+                + brand
+                + '\''
+                + ", model='"
+                + model
+                + '\''
+                + ", capacity='"
+                + capacity
+                + '\''
+                + ", isDefrosing="
+                + isDefrosing
+                + ", energyEfficiencyClass="
+                + energyEfficiencyClass
+                + '}';
     }
 }

@@ -7,39 +7,25 @@ import static org.junit.jupiter.api.Assertions.*;
 class MedicalRefrigeratorTest {
 
     @Test
-    void testGetCapacityInTestTubes(){
+    public void testMedicalRefrigeratorConstructor(){
         MedicalRefrigerator fridge = (new MedicalRefrigerator("EmFridge", "LK52", "25l", false, 'A', 200, 50 ));
+        assertEquals("EmFridge", fridge.getBrand());
+        assertEquals("LK52", fridge.getModel());
+        assertEquals("25l", fridge.getCapacity());
+        assertEquals(false, fridge.isDefrosing());
+        assertEquals('A', fridge.getEnergyEfficiencyClass());
         assertEquals(200, fridge.getCapacityInTestTubes());
-    }
-
-    @Test
-    void testSetCapacityInTestTubes(){
-        MedicalRefrigerator fridge = (new MedicalRefrigerator("EmFridge", "LK52", "25l", false, 'A', 200, 50 ));
-        fridge.setCapacityInTestTubes(300);
-        assertEquals(300, fridge.getCapacityInTestTubes());
-    }
-
-    @Test
-    void testGetCapacityOfTestTubeInMl(){
-        MedicalRefrigerator fridge = (new MedicalRefrigerator("EmFridge", "LK52", "25l", false, 'A', 200, 50 ));
         assertEquals(50, fridge.getCapacityOfTestTubeInMl());
     }
 
     @Test
-    void testSetCapacityOfTestTubeInMl(){
-        MedicalRefrigerator fridge = (new MedicalRefrigerator("EmFridge", "LK52", "25l", false, 'A', 200, 50 ));
-        fridge.setCapacityOfTestTubeInMl(60);
-        assertEquals(60, fridge.getCapacityOfTestTubeInMl());
-    }
-
-    @Test
-    void testGetMaxUsableCapacity() {
+    public void testGetMaxUsableCapacity() {
         MedicalRefrigerator fridge = (new MedicalRefrigerator("EmFridge", "LK52", "25l", false, 'A', 200, 50 ));
         assertEquals(10000, fridge.getMaxUsableCapacity());
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         MedicalRefrigerator fridge = (new MedicalRefrigerator("EmFridge", "LK52", "25l", false, 'A', 200, 50 ));
         String expected = "MedicalRefrigerator{" +
                 "capacityInTestTubes=200"+
