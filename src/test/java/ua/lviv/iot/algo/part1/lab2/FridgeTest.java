@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class FridgeTest extends TestCase {
 
+    @Test
     public void testGetMaxUsableCapacity() {
     }
 

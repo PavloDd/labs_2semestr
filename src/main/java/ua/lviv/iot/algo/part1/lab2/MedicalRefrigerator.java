@@ -6,8 +6,6 @@ import lombok.Setter;
 @Setter
 @Getter
 
-
-
 public class MedicalRefrigerator extends Fridge {
     private int capacityInTestTubes;
     private int capacityOfTestTubeInMl;

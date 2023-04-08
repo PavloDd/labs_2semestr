@@ -38,4 +38,4 @@ class WineFridgeTest {
                 "}";
         assertEquals(expected, fridge.toString());
     }
-    }
+}

@@ -18,7 +18,6 @@ class ShowcaseRefrigeratorTest {
         assertEquals(20, fridge.getWeightWhichFitsUnderBarInKg());
     }
 
-
     @Test
     public void testGetMaxUsableCapacity() {
         ShowcaseRefrigerator fridge = new ShowcaseRefrigerator("Samsung", "Ap32", "120l", false, 'C', 1, 20, 12);
@@ -40,6 +39,4 @@ class ShowcaseRefrigeratorTest {
                 "}";
         assertEquals(expected, fridge.toString());
     }
-
-
-    }
+}

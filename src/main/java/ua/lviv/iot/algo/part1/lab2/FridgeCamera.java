@@ -1,12 +1,10 @@
 package ua.lviv.iot.algo.part1.lab2;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
-
 
 public class FridgeCamera extends Fridge {
     private int numberOfEntrances = 1;
@@ -54,5 +52,4 @@ public class FridgeCamera extends Fridge {
                 + energyEfficiencyClass
                 + '}';
     }
-
 }

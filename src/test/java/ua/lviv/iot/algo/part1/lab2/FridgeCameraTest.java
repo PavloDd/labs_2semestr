@@ -40,8 +40,4 @@ public class FridgeCameraTest extends TestCase {
                 "}";
         assertEquals(expected, fridge.toString());
     }
-
-
-
-
 }

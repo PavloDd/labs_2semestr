@@ -1,4 +1,3 @@
-
 package ua.lviv.iot.algo.part1.lab2;
 
 import lombok.Getter;
@@ -8,7 +7,6 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-
 
 public abstract class Fridge {
     protected String brand;
@@ -40,6 +38,4 @@ public abstract class Fridge {
     public void deleteModelInfo() {
         this.model = null;
     }
-
-
 }

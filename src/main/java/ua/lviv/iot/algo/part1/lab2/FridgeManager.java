@@ -30,5 +30,4 @@ public class FridgeManager {
                 filter(fridge -> fridge.getEnergyEfficiencyClass() == energyEfficiencyClass).
                 collect(Collectors.toList());
     }
-
 }

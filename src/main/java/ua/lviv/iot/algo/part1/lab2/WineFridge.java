@@ -6,12 +6,7 @@ import lombok.Getter;
 @Setter
 @Getter
 
-
-
-
-
 public class WineFridge extends Fridge {
-
     private int capacityInNumberOfBottles;
     private int maxVolumeOfBottleInLitters;
 
