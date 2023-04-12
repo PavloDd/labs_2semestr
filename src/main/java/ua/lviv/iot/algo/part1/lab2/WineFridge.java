@@ -7,41 +7,44 @@ import lombok.Getter;
 @Getter
 
 public class WineFridge extends Fridge {
-    private int capacityInNumberOfBottles;
-    private int maxVolumeOfBottleInLitters;
+    private final int capacityInNumberOfBottles;
+    private final int maxVolumeOfBottleInLitters;
 
     @Override
-    public int getMaxUsableCapacity () {
+    public int getMaxUsableCapacity() {
         int capacity = this.capacityInNumberOfBottles * this.maxVolumeOfBottleInLitters;
         return capacity;
     }
 
-    public WineFridge(String brand, String model, String capacity, boolean isDefrosing, char energyEfficiencyClass, int capacityInNumberOfBottles, int maxVolumeOfBottleInLitters) {
+    public WineFridge(final String brand, final String model,
+                      final String capacity, final boolean isDefrosing,
+                      final char energyEfficiencyClass, final int capacityInNumberOfBottles,
+                      final int maxVolumeOfBottleInLitters) {
         super(brand, model, capacity, isDefrosing, energyEfficiencyClass);
         this.capacityInNumberOfBottles = capacityInNumberOfBottles;
         this.maxVolumeOfBottleInLitters = maxVolumeOfBottleInLitters;
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return "WineFridge{"
                 + "capacityInNumberOfBottles="
-                + capacityInNumberOfBottles
+                + getCapacityInNumberOfBottles()
                 + ", maxVolumeOfBottleInLitters="
-                + maxVolumeOfBottleInLitters
+                + getMaxVolumeOfBottleInLitters()
                 + ", brand='"
-                + brand
+                + getBrand()
                 + '\''
                 + ", model='"
-                + model
+                + getModel()
                 + '\''
                 + ", capacity='"
-                + capacity
+                + getCapacity()
                 + '\''
                 + ", isDefrosing="
-                + isDefrosing
+                + getIsDefrosing()
                 + ", energyEfficiencyClass="
-                + energyEfficiencyClass
+                + getEnergyEfficiencyClass()
                 + '}';
     }
 }

@@ -11,21 +11,21 @@ public class FridgeManager {
         return fridges;
     }
 
-    public void addFridge(Fridge fridge) {
+    public void addFridge(final Fridge fridge) {
         this.fridges.add(fridge);
     }
 
-    public void addAllFridges(List<Fridge> fridges) {
+    public void addAllFridges(final List<Fridge> fridges) {
         this.fridges.addAll(fridges);
     }
 
-     public List<Fridge> findFridgeByBrand(String brand) {
+     public List<Fridge> findFridgeByBrand(final String brand) {
         return fridges.stream().
                 filter(fridge -> fridge.getBrand().equals(brand)).
                 collect(Collectors.toList());
     }
 
-    public List<Fridge> findFridgeByEnergyEfficiencyClass(char energyEfficiencyClass) {
+    public List<Fridge> findFridgeByEnergyEfficiencyClass(final char energyEfficiencyClass) {
         return fridges.stream().
                 filter(fridge -> fridge.getEnergyEfficiencyClass() == energyEfficiencyClass).
                 collect(Collectors.toList());

@@ -12,7 +12,7 @@ class ShowcaseRefrigeratorTest {
         assertEquals("Samsung", fridge.getBrand());
         assertEquals("Ap32", fridge.getModel());
         assertEquals("120l", fridge.getCapacity());
-        assertEquals(false, fridge.isDefrosing());
+        assertEquals(false, fridge.getIsDefrosing());
         assertEquals('C', fridge.getEnergyEfficiencyClass());
         assertEquals(1, fridge.getExposureAreaInSquareMeters());
         assertEquals(20, fridge.getWeightWhichFitsUnderBarInKg());

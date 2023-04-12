@@ -11,7 +11,7 @@ public class FridgeCameraTest extends TestCase {
         assertEquals("bosch", fridge.getBrand());
         assertEquals("aa", fridge.getModel());
         assertEquals("22l", fridge.getCapacity());
-        assertEquals(false, fridge.isDefrosing());
+        assertEquals(false, fridge.getIsDefrosing());
         assertEquals('A', fridge.getEnergyEfficiencyClass());
         assertEquals(2, fridge.getNumberOfEntrances());
         assertEquals("mechanic", fridge.getTypeOfTapeDrive());

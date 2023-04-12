@@ -7,19 +7,22 @@ import lombok.Setter;
 @Getter
 
 public class ShowcaseRefrigerator extends Fridge {
-    private int exposureAreaInSquareMeters;
-    private int weightWhichFitsUnderBarInKg;
-    private int weightWhichFitsOnBarInKg;
+    private final int exposureAreaInSquareMeters;
+    private final int weightWhichFitsUnderBarInKg;
+    private final int weightWhichFitsOnBarInKg;
     private static int VOLUME_PER_KILOGRAM = 3;
 
     @Override
-    public int getMaxUsableCapacity () {
+    public int getMaxUsableCapacity() {
         int capacity = (this.weightWhichFitsOnBarInKg + this.weightWhichFitsUnderBarInKg) * VOLUME_PER_KILOGRAM;
         return capacity;
 
     }
 
-    public ShowcaseRefrigerator(String brand, String model, String capacity, boolean isDefrosing, char energyEfficiencyClass, int exposureAreaInSquareMeters, int weightWhichFitsUnderBarInKg, int weightWhichFitsOnBarInKg) {
+    public ShowcaseRefrigerator(final String brand, final String model,
+                                final String capacity, final boolean isDefrosing,
+                                final char energyEfficiencyClass, final int exposureAreaInSquareMeters,
+                                final int weightWhichFitsUnderBarInKg, final int weightWhichFitsOnBarInKg) {
         super(brand, model, capacity, isDefrosing, energyEfficiencyClass);
         this.exposureAreaInSquareMeters = exposureAreaInSquareMeters;
         this.weightWhichFitsUnderBarInKg = weightWhichFitsUnderBarInKg;
@@ -27,27 +30,27 @@ public class ShowcaseRefrigerator extends Fridge {
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return "ShowcaseRefrigerator{"
                 + "exposureAreaInSquareMeters="
-                + exposureAreaInSquareMeters
+                + getExposureAreaInSquareMeters()
                 + ", weightWhichFitsUnderBarInKg="
-                + weightWhichFitsUnderBarInKg
+                + getWeightWhichFitsUnderBarInKg()
                 + ", weightWhichFitsOnBarInKg="
-                + weightWhichFitsOnBarInKg
+                + getWeightWhichFitsOnBarInKg()
                 + ", brand='"
-                + brand
+                + getBrand()
                 + '\''
                 + ", model='"
-                + model
+                + getModel()
                 + '\''
                 + ", capacity='"
-                + capacity
+                + getCapacity()
                 + '\''
                 + ", isDefrosing="
-                + isDefrosing
+                + getIsDefrosing()
                 + ", energyEfficiencyClass="
-                + energyEfficiencyClass
+                + getEnergyEfficiencyClass()
                 + '}';
     }
 }

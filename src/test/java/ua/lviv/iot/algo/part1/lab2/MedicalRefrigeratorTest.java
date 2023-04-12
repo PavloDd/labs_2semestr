@@ -12,7 +12,7 @@ class MedicalRefrigeratorTest {
         assertEquals("EmFridge", fridge.getBrand());
         assertEquals("LK52", fridge.getModel());
         assertEquals("25l", fridge.getCapacity());
-        assertEquals(false, fridge.isDefrosing());
+        assertEquals(false, fridge.getIsDefrosing());
         assertEquals('A', fridge.getEnergyEfficiencyClass());
         assertEquals(200, fridge.getCapacityInTestTubes());
         assertEquals(50, fridge.getCapacityOfTestTubeInMl());

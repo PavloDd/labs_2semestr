@@ -7,8 +7,8 @@ import lombok.Setter;
 @Getter
 
 public class MedicalRefrigerator extends Fridge {
-    private int capacityInTestTubes;
-    private int capacityOfTestTubeInMl;
+    private final int capacityInTestTubes;
+    private final int capacityOfTestTubeInMl;
 
     @Override
     public int getMaxUsableCapacity() {
@@ -16,32 +16,35 @@ public class MedicalRefrigerator extends Fridge {
         return capacity;
     }
 
-    public MedicalRefrigerator(String brand, String model, String capacity, boolean isDefrosing, char energyEfficiencyClass, int capacityInTestTubes, int capacityOfTestTubeInMl) {
+    public MedicalRefrigerator(final String brand, final String model,
+                               final String capacity, final boolean isDefrosing,
+                               final char energyEfficiencyClass, final int capacityInTestTubes,
+                               final int capacityOfTestTubeInMl) {
         super(brand, model, capacity, isDefrosing, energyEfficiencyClass);
         this.capacityInTestTubes = capacityInTestTubes;
         this.capacityOfTestTubeInMl = capacityOfTestTubeInMl;
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return "MedicalRefrigerator{"
                 + "capacityInTestTubes="
-                + capacityInTestTubes
+                + getCapacityInTestTubes()
                 + ", capacityOfTestTubeInMl="
-                + capacityOfTestTubeInMl
+                + getCapacityOfTestTubeInMl()
                 + ", brand='"
-                + brand
+                + getBrand()
                 + '\''
                 + ", model='"
-                + model
+                + getModel()
                 + '\''
                 + ", capacity='"
-                + capacity
+                + getCapacity()
                 + '\''
                 + ", isDefrosing="
-                + isDefrosing
+                + getIsDefrosing()
                 + ", energyEfficiencyClass="
-                + energyEfficiencyClass
+                + getEnergyEfficiencyClass()
                 + '}';
     }
 }

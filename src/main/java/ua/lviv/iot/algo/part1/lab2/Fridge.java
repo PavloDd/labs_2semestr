@@ -9,13 +9,15 @@ import lombok.ToString;
 @ToString
 
 public abstract class Fridge {
-    protected String brand;
-    protected String model;
-    protected String capacity;
-    protected boolean isDefrosing;
-    protected char energyEfficiencyClass;
+    private final String brand;
+    private final String model;
+    private final String capacity;
+    private final boolean isDefrosing;
+    private final char energyEfficiencyClass;
 
-    public Fridge(String brand, String model, String capacity, Boolean isDefrosing, char energyEfficiencyClass) {
+    public Fridge(final String brand, final String model,
+                  final String capacity, final Boolean isDefrosing,
+                  final char energyEfficiencyClass) {
         this.brand = brand;
         this.model = model;
         this.capacity = capacity;
@@ -23,19 +25,9 @@ public abstract class Fridge {
         this.energyEfficiencyClass = energyEfficiencyClass;
     }
 
-    public int getMaxUsableCapacity() {
-        return 0;
-    }
+    public abstract int getMaxUsableCapacity();
 
-    public void turnOnDefrosing() {
-        this.isDefrosing = true;
-    }
-
-    public void turnOffDefrosing() {
-        this.isDefrosing = false;
-    }
-
-    public void deleteModelInfo() {
-        this.model = null;
+    public boolean getIsDefrosing() {
+        return isDefrosing;
     }
 }

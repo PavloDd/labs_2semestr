@@ -7,10 +7,10 @@ import lombok.Setter;
 @Getter
 
 public class FridgeCamera extends Fridge {
-    private int numberOfEntrances = 1;
-    private String typeOfTapeDrive;
-    private int maxTapeSpeedInMetersPerSec;
-    private int maxWeightTapeCanWithstand;
+    private final int numberOfEntrances;
+    private final String typeOfTapeDrive;
+    private final int maxTapeSpeedInMetersPerSec;
+    private final int maxWeightTapeCanWithstand;
     private static int VOLUME_PER_KILOGRAM = 2;
 
     @Override
@@ -19,7 +19,11 @@ public class FridgeCamera extends Fridge {
         return capacity;
     }
 
-    public FridgeCamera(String brand, String model, String capacity, boolean isDefrosing, char energyEfficiencyClass, int numberOfEntrances, String typeOfTapeDrive, int maxTapeSpeedInMetersPerSec, int maxWeightTapeCanWithstand) {
+    public FridgeCamera(final String brand, final String model,
+                        final String capacity, final boolean isDefrosing,
+                        final char energyEfficiencyClass, final int numberOfEntrances,
+                        final String typeOfTapeDrive, final int maxTapeSpeedInMetersPerSec,
+                        final int maxWeightTapeCanWithstand) {
         super(brand, model, capacity, isDefrosing, energyEfficiencyClass);
         this.numberOfEntrances = numberOfEntrances;
         this.typeOfTapeDrive = typeOfTapeDrive;
@@ -31,25 +35,27 @@ public class FridgeCamera extends Fridge {
     public String toString() {
         return "FridgeCamera{"
                 + "numberOfEntrances="
-                + numberOfEntrances
+                + getNumberOfEntrances()
                 + ", typeOfTapeDrive='"
-                + typeOfTapeDrive
+                + getTypeOfTapeDrive()
                 + '\''
                 + ", maxTapeSpeedInMetersPerSec="
-                + maxTapeSpeedInMetersPerSec
+                + getMaxTapeSpeedInMetersPerSec()
                 + ", maxWeightTapeCanWithstand="
-                + maxWeightTapeCanWithstand
-                + ", brand='" + brand
+                + getMaxWeightTapeCanWithstand()
+                + ", brand='"
+                + getBrand()
                 + '\''
-                + ", model='" + model
+                + ", model='"
+                + getModel()
                 + '\''
                 + ", capacity='"
-                + capacity
+                + getCapacity()
                 + '\''
                 + ", isDefrosing="
-                + isDefrosing
+                + getIsDefrosing()
                 + ", energyEfficiencyClass="
-                + energyEfficiencyClass
+                + getEnergyEfficiencyClass()
                 + '}';
     }
 }

@@ -12,7 +12,7 @@ class WineFridgeTest {
         assertEquals("Bosch", fridge.getBrand());
         assertEquals("AA12", fridge.getModel());
         assertEquals("22l", fridge.getCapacity());
-        assertEquals(false, fridge.isDefrosing());
+        assertEquals(false, fridge.getIsDefrosing());
         assertEquals('B', fridge.getEnergyEfficiencyClass());
         assertEquals(10, fridge.getCapacityInNumberOfBottles());
         assertEquals(2, fridge.getMaxVolumeOfBottleInLitters());
