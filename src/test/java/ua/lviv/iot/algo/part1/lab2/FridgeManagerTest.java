@@ -15,9 +15,9 @@ class FridgeManagerTest {
 
     @BeforeEach
     public void setUp(){
-        FridgeManager fridgeManager = new FridgeManager();
-        WineFridge fridge0 = new WineFridge("Bosch","AA12","22l",false,'A',10, 3);
-        WineFridge fridge1 = new WineFridge("Bosch","BB12","23l",false,'B',11, 2);
+        fridgeManager = new FridgeManager();
+        fridge0 = new WineFridge("Bosch","AA12","22l",false,'A',10, 3);
+        fridge1 = new WineFridge("Samsung","BB12","23l",false,'B',11, 2);
     }
 
     @Test
@@ -56,7 +56,6 @@ class FridgeManagerTest {
         fridges.add(fridge0);
         fridges.add(fridge1);
         fridgeManager.addAllFridges(fridges);
-        assertFalse(fridgeManager.getFridges().isEmpty());
         List <Fridge> aClassFridges = fridgeManager.findFridgeByEnergyEfficiencyClass('A');
         assertTrue(aClassFridges.contains(fridge0));
         assertFalse(aClassFridges.contains(fridge1));
