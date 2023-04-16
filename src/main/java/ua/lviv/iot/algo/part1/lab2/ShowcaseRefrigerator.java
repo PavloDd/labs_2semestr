@@ -30,6 +30,22 @@ public class ShowcaseRefrigerator extends Fridge {
     }
 
     @Override
+    public String getHeaders() {
+        return super.getHeaders() + ','
+                + "exposureAreaInSquareMeters" + ','
+                + "weightWhichFitsUnderBarInKg" + ','
+                + "weightWhichFitsOnBarInKg";
+    }
+
+    @Override
+    public String getCSV() {
+        return super.getCSV() + ','
+                + getExposureAreaInSquareMeters() + ','
+                + getWeightWhichFitsUnderBarInKg() + ','
+                + getWeightWhichFitsUnderBarInKg();
+    }
+
+    @Override
     public String toString() {
         return "ShowcaseRefrigerator{"
                 + "exposureAreaInSquareMeters="

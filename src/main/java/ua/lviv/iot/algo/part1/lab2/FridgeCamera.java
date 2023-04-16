@@ -19,6 +19,24 @@ public class FridgeCamera extends Fridge {
         return capacity;
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ','
+                + "numberOfEntrances" + ','
+                + "typeOfTapeDrive" + ','
+                + "maxTapeSpeedInMetersPerSec" + ','
+                + "maxWeightTapeCanWithstand";
+    }
+
+    @Override
+    public String getCSV() {
+        return super.getCSV() + ','
+                + getNumberOfEntrances() + ','
+                + getTypeOfTapeDrive() + ','
+                + getMaxTapeSpeedInMetersPerSec() + ','
+                + getMaxWeightTapeCanWithstand();
+    }
+
     public FridgeCamera(final String brand, final String model,
                         final String capacity, final boolean isDefrosing,
                         final char energyEfficiencyClass, final int numberOfEntrances,

@@ -30,4 +30,12 @@ public abstract class Fridge {
     public boolean getIsDefrosing() {
         return isDefrosing;
     }
+
+    public String getHeaders (){
+        return String.join(",","brand", "model", "capacity", "isDefrosing", "energyEfficiencyClass");
+    };
+
+    public String getCSV (){
+        return String.join(",", getBrand(), getModel(), getCapacity(), String.valueOf(getIsDefrosing()), String.valueOf(getEnergyEfficiencyClass()));
+    };
 }

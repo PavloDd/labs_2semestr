@@ -26,6 +26,20 @@ public class WineFridge extends Fridge {
     }
 
     @Override
+    public String getHeaders() {
+        return super.getHeaders() + ','
+                + "capacityInNumberOfBottles" + ','
+                + "maxVolumeOfBottleInLitters";
+    }
+
+    @Override
+    public String getCSV() {
+        return super.getCSV() + ','
+                + getCapacityInNumberOfBottles() + ','
+                + getMaxVolumeOfBottleInLitters();
+    }
+
+    @Override
     public String toString() {
         return "WineFridge{"
                 + "capacityInNumberOfBottles="

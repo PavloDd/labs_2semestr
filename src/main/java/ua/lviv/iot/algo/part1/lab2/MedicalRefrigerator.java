@@ -26,6 +26,20 @@ public class MedicalRefrigerator extends Fridge {
     }
 
     @Override
+    public String getHeaders() {
+        return super.getHeaders() + ','
+                + "capacityInTestTubes" + ','
+                + "capacityOfTestTubeInMl";
+    }
+
+    @Override
+    public String getCSV() {
+        return super.getCSV() + ','
+                + getCapacityInTestTubes() + ','
+                + getCapacityOfTestTubeInMl();
+    }
+
+    @Override
     public String toString() {
         return "MedicalRefrigerator{"
                 + "capacityInTestTubes="
