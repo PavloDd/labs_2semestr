@@ -1,10 +1,8 @@
-brand,model,capacity,isDefrosing,energyEfficiencyClass,capacityInNumberOfBottles,maxVolumeOfBottleInLitters
-Bosch,AA12,22l,false,A,10,3
-brand,model,capacity,isDefrosing,energyEfficiencyClass,capacityInNumberOfBottles,maxVolumeOfBottleInLitters
-Samsung,BB12,23l,false,B,11,2
 brand,model,capacity,isDefrosing,energyEfficiencyClass,numberOfEntrances,typeOfTapeDrive,maxTapeSpeedInMetersPerSec,maxWeightTapeCanWithstand
+bosch,aa,22l,false,A,2,mechanic,2,4
 bosch,aa,22l,false,A,2,mechanic,2,4
 brand,model,capacity,isDefrosing,energyEfficiencyClass,capacityInTestTubes,capacityOfTestTubeInMl
 EmFridge,LK52,25l,false,A,200,50
-brand,model,capacity,isDefrosing,energyEfficiencyClass,numberOfEntrances,typeOfTapeDrive,maxTapeSpeedInMetersPerSec,maxWeightTapeCanWithstand
-bosch,aa,22l,false,A,2,mechanic,2,4
+brand,model,capacity,isDefrosing,energyEfficiencyClass,capacityInNumberOfBottles,maxVolumeOfBottleInLitters
+Bosch,AA12,22l,false,A,10,3
+Samsung,BB12,23l,false,B,11,2

@@ -15,11 +15,10 @@ import java.util.List;
 import java.util.LinkedList;
 
 public class FridgeWriter {
-    public static String write(List<Fridge> fridges) {
-        String defaultFileName = "result.csv";
+    public static void write(List<Fridge> fridges, String defaultFileName) {
         Map <String, Boolean> headerMap = new HashMap<>();
         if (fridges == null || fridges.isEmpty()) {
-            return null;
+            return;
         }
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(defaultFileName));
@@ -35,12 +34,10 @@ public class FridgeWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return defaultFileName;
     }
 
         public static void main(String[] args)  {
             FridgeManager fridgeManager = new FridgeManager();
-
             List<Fridge> fridges = new LinkedList<>();
             Fridge fridge0 = new WineFridge("Bosch","AA12","22l",false,'A',10, 3);
             Fridge fridge1 = new WineFridge("Samsung","BB12","23l",false,'B',11, 2);
@@ -56,22 +53,8 @@ public class FridgeWriter {
 
             List<Fridge> sortedFridges = fridgeManager.sortFridgesByClass(fridges);
 
-            write(sortedFridges);
-
-
-
+            write(sortedFridges, "result.csv");
+            
         }
-
-//        String defaultFileName = "result.csv";
-//        try (FileWriter writer = new FileWriter(defaultFileName);) {
-//            for (Fridge fridge : fridges) {
-//                try {
-//                    writer.write(fridge.getHeaders());
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//            return defaultFileName;
-//    }
-//    }
+        
 }
