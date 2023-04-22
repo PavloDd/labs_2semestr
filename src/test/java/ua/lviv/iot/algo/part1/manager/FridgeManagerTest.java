@@ -1,7 +1,9 @@
-package ua.lviv.iot.algo.part1.lab2;
+package ua.lviv.iot.algo.part1.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab2.Fridge;
+import ua.lviv.iot.algo.part1.lab2.WineFridge;
 
 import java.util.LinkedList;
 import java.util.List;

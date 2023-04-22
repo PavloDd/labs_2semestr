@@ -1,4 +1,6 @@
-package ua.lviv.iot.algo.part1.lab2;
+package ua.lviv.iot.algo.part1.manager;
+
+import ua.lviv.iot.algo.part1.lab2.Fridge;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -33,7 +35,7 @@ public class FridgeManager {
                 collect(Collectors.toList());
     }
 
-    public List<Fridge> sortFridgesByClass(List <Fridge> fridges){
+    public static List<Fridge> sortFridgesByClass(List <Fridge> fridges){
         Collections.sort(fridges, new Comparator<>() {
             @Override
             public int compare(Fridge fridge0, Fridge fridge1) {
@@ -43,4 +45,5 @@ public class FridgeManager {
         return fridges;
 
     }
+
 }

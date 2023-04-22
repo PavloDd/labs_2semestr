@@ -2,6 +2,7 @@ package ua.lviv.iot.algo.part1.writer;
 
 import org.junit.jupiter.api.*;
 import ua.lviv.iot.algo.part1.lab2.*;
+import ua.lviv.iot.algo.part1.manager.FridgeManager;
 
 import java.io.IOException;
 import java.io.File;
@@ -33,35 +34,34 @@ class FridgeWriterTest {
                         new FridgeCamera("bosch", "aa", "22l", false, 'A', 2, "mechanic", 2, 4)
                 )
         );
-        fridgeManager.sortFridgesByClass(fridgesNonSorted);
     }
 
-    @AfterAll
-    public static void tearDown() throws IOException {
+    @AfterEach
+    public void tearDown() throws IOException {
         Files.deleteIfExists(Path.of(RESULT_FILENAME));
-    }
-
-    @Test
-    public void testListIsNull() {
-        FridgeWriter.write(null, RESULT_FILENAME);
-        Assertions.assertFalse(actual.exists());
     }
 
     @Test
     public void testListIsEmpty(){
         fridges = new LinkedList<>();
-        FridgeWriter.write(fridges, RESULT_FILENAME);
+        FridgeWriter.writeToFile(fridges, RESULT_FILENAME);
         Assertions.assertFalse(actual.exists());
     }
 
     @Test
     public void testWriteListOfFridgesForSorted() throws IOException {
-
-        FridgeWriter.write(fridges, RESULT_FILENAME);
+        fridges = fridgeManager.sortFridgesByClass(fridgesNonSorted);
+        FridgeWriter.writeToFile(fridges, RESULT_FILENAME);
         List<String> actualLines = Files.readAllLines(Paths.get(RESULT_FILENAME));
         List<String> expectedLines = Files.readAllLines(Paths.get(EXPECTED_FILENAME));
 
         Assertions.assertEquals(expectedLines, actualLines);
+    }
+
+    @Test
+    public void testListIsNull() {
+        FridgeWriter.writeToFile(null, RESULT_FILENAME);
+        Assertions.assertFalse(actual.exists());
     }
 
 }
